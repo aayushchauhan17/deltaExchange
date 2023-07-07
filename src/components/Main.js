@@ -21,7 +21,9 @@ function Main() {
   }, []);
 
   useEffect(() => {
-    if (getDataDb?.length) dispatch({ type: "GET_DATA", payload: getDataDb });
+    if (getDataDb?.length) {
+      dispatch({ type: "GET_DATA", payload: getDataDb });
+    }
   }, [getDataDb]);
 
   const myState = useSelector((state) => state?.memberReducer);
