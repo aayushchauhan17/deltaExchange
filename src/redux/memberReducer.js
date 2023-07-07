@@ -24,6 +24,7 @@ let memberReducer = (state = defaultState, action) => {
       let newState = state;
       newState = {
         ...newState,
+        // eslint-disable-next-line array-callback-return
         showMembers: newState.members?.filter((arr) => {
           if (
             arr.name !== action.payload.name &&
@@ -45,6 +46,7 @@ let memberReducer = (state = defaultState, action) => {
       newState = {
         ...newState,
         selectedFilter: action.payload,
+        // eslint-disable-next-line array-callback-return
         showMembers: newState.members?.filter((arr) => {
           if (action.payload[arr.company]) {
             return arr;
@@ -61,6 +63,7 @@ let memberReducer = (state = defaultState, action) => {
       } else if (action.payload === "Active") {
         newState = {
           ...newState,
+          // eslint-disable-next-line array-callback-return
           showMembers: newState.members?.filter((arr) => {
             if (arr.status === "Active") return arr;
           }),
@@ -68,6 +71,7 @@ let memberReducer = (state = defaultState, action) => {
       } else {
         newState = {
           ...newState,
+          // eslint-disable-next-line array-callback-return
           showMembers: newState.members?.filter((arr) => {
             if (arr.status === "Close") return arr;
           }),

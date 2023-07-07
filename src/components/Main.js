@@ -24,7 +24,7 @@ function Main() {
     if (getDataDb?.length) {
       dispatch({ type: "GET_DATA", payload: getDataDb });
     }
-  }, [getDataDb]);
+  }, [dispatch, getDataDb]);
 
   const myState = useSelector((state) => state?.memberReducer);
 

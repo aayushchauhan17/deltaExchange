@@ -2,7 +2,6 @@ import React from "react";
 import "./TableRow.css";
 import { MdDelete } from "react-icons/md";
 import { useDispatch } from "react-redux";
-import { db } from "../firebase/firebaseConfig";
 import { deleteData } from "../firebase/DeleteData";
 
 function TableRow({ data }) {
